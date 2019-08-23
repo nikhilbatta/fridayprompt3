@@ -3,6 +3,7 @@ $(document).ready(function(){
   event.preventDefault();
   var number = parseInt($("#grabNumber").val());
   $("#formOne").append("<li>" + firstFunction(number)  + "</li>")
+  $("#grabNumber").val('');
 });
 });
 // try three
@@ -17,17 +18,21 @@ console.log(arr)
 return lookForNumbers(arr);
 }
 function lookForNumbers(arr){
+  var name = $("#name").val()
   // var slicer = arr.toString();
 for (var j=0;j<arr.length;j++){
     var numString = arr[j].toString()
     if(numString.includes("3")){
-      arr[j] = "Im sorry dave, I cant do that"
+      arr[j] = " I'm sorry, "  + name + ". I'm afraid I can't do that. "
     }
     else if (numString.includes("2")) {
-      arr[j]="boop";
+      arr[j]= " boop ";
     }
     else if(numString.includes("1")){
-    arr[j]= "beep";
+    arr[j]= " beep ";
+  }
+  else{
+    arr[j] =  " " + numString;
   }
 }
 return arr;
