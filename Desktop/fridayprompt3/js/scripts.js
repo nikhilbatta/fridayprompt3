@@ -14,4 +14,17 @@ arr.forEach(function(num){
 
 
 console.log(arr)
- 
+ // try two
+var number = 19;
+var arr = []
+for (var i = 0; i<number; i++){
+  arr.push(i)
+
+}
+lookForNumbers()
+function lookForNumbers(){
+ var index = arr.indexOf(1)
+if(index>-1){
+ return arr.splice(index,1)
+}
+}
