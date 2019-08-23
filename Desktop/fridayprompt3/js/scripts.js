@@ -1,17 +1,17 @@
-
-var number = 11;
+var number = 1;
 var arr = []
 for (var i = number; i > 0; i--){
   arr.push(i)
 }
  console.log(arr)
 arr.forEach(function(num){
-  if (num == 11){
+  if (num == 1){
 
-    num = "beep"
-    arr.push(num)
+    arr[num]= "beep"
+    arr.push(arr[num])
   }
 })
 
 
 console.log(arr)
+ 
