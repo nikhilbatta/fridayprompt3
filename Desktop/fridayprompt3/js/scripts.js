@@ -2,24 +2,20 @@ $(document).ready(function(){
   $("#formOne").submit(function(event){
   event.preventDefault();
   var number = parseInt($("#grabNumber").val());
-  $("#formOne").append("<li>" + firstFunction(number)  + "</li>")
+  $("#output").text(firstFunction(number))
   $("#grabNumber").val('');
 });
 });
-// try three
-
 function firstFunction(userNumber){
 var arr = []
 for (var i = 0; i<=userNumber; i++){
   arr.push(i)
 }
 console.log(arr)
-
 return lookForNumbers(arr);
 }
 function lookForNumbers(arr){
   var name = $("#name").val()
-  // var slicer = arr.toString();
 for (var j=0;j<arr.length;j++){
     var numString = arr[j].toString()
     if(numString.includes("3")){
